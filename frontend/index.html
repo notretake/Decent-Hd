@@ -1,0 +1,278 @@
+<html><head><base href="." /><title>Decent Hd - Seamless HBAR to Mobile Money Offramp</title><style>
+:root {
+  --primary: #722DD9;
+  --secondary: #00DBCC;
+  --dark: #1A1F2B;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(114,45,217,0.15) 0%, rgba(0,219,204,0.05) 50%, rgba(26,31,43,0) 100%);
+  z-index: 0;
+}
+
+.nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+.hero-content {
+  max-width: 1200px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.primary-button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  color: var(--light);
+}
+
+.secondary-button {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.feature-card {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary);
+}
+
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.floating-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 10s infinite ease-in-out;
+}
+
+.phone-illustration {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  margin: 2rem auto;
+}
+
+@keyframes typeNumber {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.typing-animation {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: var(--secondary);
+  white-space: nowrap;
+  animation: typeNumber 3s infinite;
+}
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="hero">
+    <div class="floating-elements">
+      <div class="floating-circle" style="width: 300px; height: 300px; background: var(--primary); top: 10%; left: 10%; animation-delay: 0s;"></div>
+      <div class="floating-circle" style="width: 200px; height: 200px; background: var(--secondary); top: 60%; right: 10%; animation-delay: -3s;"></div>
+    </div>
+    
+    <nav class="nav">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-gradient)" stroke-width="2"/>
+          <path d="M2 17L12 22L22 17" stroke="url(#logo-gradient)" stroke-width="2"/>
+          <path d="M2 12L12 17L22 12" stroke="url(#logo-gradient)" stroke-width="2"/>
+          <defs>
+            <linearGradient id="logo-gradient" x1="2" y1="2" x2="22" y2="22">
+              <stop offset="0%" stop-color="var(--primary)"/>
+              <stop offset="100%" stop-color="var(--secondary)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>Decent</span> Hd
+      </div>
+      <div class="nav-links">
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Bridge HBAR to Mobile Money</h1>
+      <p class="hero-subtitle">Instantly convert your Hedera HBAR tokens to mobile money.<br>Simple, secure, and lightning-fast.</p>
+      
+      <div class="phone-illustration">
+        <svg width="300" height="600" viewBox="0 0 300 600">
+          <rect x="30" y="0" width="240" height="480" rx="30" fill="none" stroke="var(--secondary)" stroke-width="4"/>
+          <rect x="40" y="20" width="220" height="440" rx="20" fill="var(--dark)" stroke="var(--primary)" stroke-width="2"/>
+          <circle cx="150" cy="500" r="20" stroke="var(--secondary)" stroke-width="2" fill="none"/>
+        </svg>
+        <div class="typing-animation">*185*4#</div>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="https://example.com/get-started" class="cta-button primary-button">Get USSD CODE</a>
+        <a href="https://example.com/learn-more" class="cta-button secondary-button">Learn More</a>
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Instant Transfers</h3>
+          <p>Convert HBAR to mobile money in seconds with our lightning-fast processing</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Secure & Reliable</h3>
+          <p>Utilising the Africas Talking API, we ensure secure and reliable transactions</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Wide Coverage accross Africa</h3>
+          <p>Onboarding many mobile phone users in Africa with over 1 twillion phone users</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body></html>
