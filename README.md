@@ -7,4 +7,6 @@ Welcome to [Decent Hd](https://noretake.com/decs/), a revolutionary Mobile money
 
 With Just a dial of a ussd code, one can exchange the Hedera tokens to mobile money and vice versa.
 
+Try it out with a simulator at Africas talking by dialing `*384*25390#`
+
 
